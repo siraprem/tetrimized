@@ -569,7 +569,6 @@ class _TetrIoPageState extends State<TetrIoPage> {
               // Configurações específicas para reduzir Missed Vsync
               useWideViewPort: false,
               loadWithOverviewMode: false,
-              setSupportMultipleWindows: false,
             ),
             onLoadStop: (controller, url) {
               if (mounted) {
