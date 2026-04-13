@@ -55,6 +55,44 @@ Sabe o Tetr.io, aquele jogo de Tetris online que todo mundo joga no navegador? P
 
 ### Se quiser buildar
 
+## Qual versão baixar?
+
+Temos duas versões disponíveis, cada uma com seu foco. Você pode instalar as duas ao mesmo tempo para testar qual funciona melhor no seu celular.
+
+### Versão Turbo (Recomendada)
+
+É a versão mais rápida e fluida. Ideal para quem quer a melhor resposta ao toque e movimentos suaves. 
+
+**Características:**
+- Melhor performance geral
+- Resposta mais rápida aos comandos
+- Movimentos mais fluidos
+
+**Nota:** Em casos raros, pode apresentar pequenos engasgos em celulares que aquecem muito durante jogos intensos.
+
+### Versão Pro (Estabilidade)
+
+É a versão "tanque de guerra". Ela é um pouco menos fluida, mas é extremamente estável.
+
+**Características:**
+- Maior estabilidade em celulares mais antigos
+- Menos problemas de fechamento inesperado
+- Performance mais consistente
+
+**Recomendada se:**
+- A versão Turbo fechar sozinha no seu celular
+- Seu celular for mais antigo ou tiver problemas de aquecimento
+- Você prefere estabilidade acima de tudo
+
+### Como testar as duas
+
+As duas versões podem ser instaladas ao mesmo tempo porque têm identificadores diferentes. Você pode testar a Turbo primeiro e, se tiver problemas, instalar a Pro sem precisar desinstalar nada.
+
+**Download das versões prontas:**
+- [Tetrimized Turbo (APK)](https://github.com/siraprem/tetrimized/releases/tag/v1.1.0-turbo)
+- [Tetrimized Pro (APK)](https://github.com/siraprem/tetrimized/releases/tag/v1.1.0-pro)
+
+
 ```bash
 # APK pra Android
 flutter build apk
