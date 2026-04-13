@@ -84,13 +84,18 @@ Temos duas versões disponíveis, cada uma com seu foco. Você pode instalar as 
 - Seu celular for mais antigo ou tiver problemas de aquecimento
 - Você prefere estabilidade acima de tudo
 
-### Como testar as duas
+### Como Baixar
+Para baixar o aplicativo, acesse nossa página de lançamentos no link abaixo:
 
-As duas versões podem ser instaladas ao mesmo tempo porque têm identificadores diferentes. Você pode testar a Turbo primeiro e, se tiver problemas, instalar a Pro sem precisar desinstalar nada.
+[Clique aqui para ver todas as versões (Releases)](https://github.com/siraprem/tetrimized/releases)
 
-**Download das versões prontas:**
-- [Tetrimized Turbo (APK)](https://github.com/siraprem/tetrimized/releases/latest/download/tetrimized-turbo.apk)
-- [Tetrimized Pro (APK)](https://github.com/siraprem/tetrimized/releases/latest/download/tetrimized-pro.apk)
+#### Qual versão escolher?
+
+**Versão PRO:** Focada em estabilidade e compatibilidade. Se você quer que o jogo funcione sem erros, escolha esta.
+
+**Versão TURBO:** Focada em máxima performance. Pode ser instável em alguns aparelhos, mas é a mais rápida.
+
+Na página, basta procurar o arquivo que termina em .apk na versão desejada e clicar nele para baixar.
 
 
 ```bash

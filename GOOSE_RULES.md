@@ -26,12 +26,7 @@
    - Marque tarefas como concluídas quando finalizadas
 
 6. **Links de Download no README**
-   - Utilize sempre a estrutura de URL estática do GitHub:
-     ```
-     https://github.com/[USUARIO]/[REPO]/releases/latest/download/[NOME_DO_ARQUIVO].apk
-     ```
-   - NUNCA coloque a versão da tag (ex: v1.1.2) no link de download
-   - Os links devem sempre apontar para a versão mais recente sem necessidade de edição manual
-   - Nomes de arquivos padrão:
-     - `tetrimized-pro.apk` para versão Pro (estabilidade)
-     - `tetrimized-turbo.apk` para versão Turbo (performance)
+   - Nunca use links diretos para arquivos
+   - Sempre aponte para a URL geral de `/releases` para evitar links quebrados e confusão de versões
+   - Exemplo correto: `https://github.com/[USUARIO]/[REPO]/releases`
+   - O usuário deve navegar até a página de releases e escolher o arquivo .apk desejado
