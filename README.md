@@ -154,6 +154,10 @@ Se quiser ajudar, fique à vontade! O projeto é open source justamente pra isso
 - Abre uma [Issue](https://github.com/siraprem/tetrimized/issues) no GitHub
 - Ou dá uma olhada nas [Discussions](https://github.com/siraprem/tetrimized/discussions)
 
+## Desenvolvimento Assistido
+
+O Tetrimized é um projeto de estudo desenvolvido com o auxílio de ferramentas de IA. A abordagem foca na iteração rápida e na resolução de problemas práticos de interface e performance. Como estudante, utilizo a assistência de IA para explorar novas arquiteturas e acelerar o ciclo de desenvolvimento, focando em entregar um software funcional e acessível para a comunidade.
+
 ## Agradecimentos
 
 - [Tetr.io](https://tetr.io) - O jogo em si, que é muito bom
