@@ -95,7 +95,7 @@ Para baixar o aplicativo, acesse nossa página de lançamentos no link abaixo:
 
 **Versão TURBO:** Focada em máxima performance. Pode ser instável em alguns aparelhos, mas é a mais rápida.
 
-Na página, basta procurar o arquivo que termina em .apk na versão desejada e clicar nele para baixar.
+Na página, basta procurar o arquivo que termina em .apk na versão desejada e clicar nele para baixar. Lembrando de usar a logica de a versao com numero maior, tipo se tem 1.1.0 e 1.1.2 vc baixa a 1.1.2 a 1.1.0 é LOGICAMENTE a antiga e tambem pensar se vc quer a pro ou turbo cada uma ta bem separada para melhor organização, é só usar o bom senso.
 
 
 ```bash
