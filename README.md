@@ -89,8 +89,8 @@ Temos duas versões disponíveis, cada uma com seu foco. Você pode instalar as 
 As duas versões podem ser instaladas ao mesmo tempo porque têm identificadores diferentes. Você pode testar a Turbo primeiro e, se tiver problemas, instalar a Pro sem precisar desinstalar nada.
 
 **Download das versões prontas:**
-- [Tetrimized Turbo (APK)](https://github.com/siraprem/tetrimized/releases/tag/v1.1.0-turbo)
-- [Tetrimized Pro (APK)](https://github.com/siraprem/tetrimized/releases/tag/v1.1.0-pro)
+- [Tetrimized Turbo (APK)](https://github.com/siraprem/tetrimized/releases/latest/download/tetrimized-turbo.apk)
+- [Tetrimized Pro (APK)](https://github.com/siraprem/tetrimized/releases/latest/download/tetrimized-pro.apk)
 
 
 ```bash
