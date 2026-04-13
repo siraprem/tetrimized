@@ -154,6 +154,22 @@ Se quiser ajudar, fique à vontade! O projeto é open source justamente pra isso
 - Abre uma [Issue](https://github.com/siraprem/tetrimized/issues) no GitHub
 - Ou dá uma olhada nas [Discussions](https://github.com/siraprem/tetrimized/discussions)
 
+## Observação sobre anúncios e performance
+
+O TETR.IO exibe anúncios para se manter ativo e, como este app funciona como um wrapper do site oficial, esses anúncios podem aparecer durante o uso. Se você sentir que os anúncios estão atrapalhando a sua jogada ou a performance no celular, existe uma solução técnica simples que é configurar um DNS privado no Android.
+
+Para fazer isso:
+
+- Vá nas configurações do seu celular e procure por Rede e Internet (ou Conexões).
+
+- Procure pela opção DNS Particular (ou Private DNS).
+
+- Selecione a opção de nome do host do provedor de DNS particular.
+
+- Digite: dns.adguard.com e salve.
+
+*Isso deve filtrar os anúncios dentro do app. No entanto, lembre-se que os anúncios são a forma que o desenvolvedor do jogo (osk) tem para manter os servidores e o projeto vivos. Se possível, considere apoiar o jogo oficial de outras formas ou desativar o DNS quando for jogar no PC para ajudar o projeto original.
+
 ## Desenvolvimento Assistido
 
 O Tetrimized é um projeto de estudo desenvolvido com o auxílio de ferramentas de IA. A abordagem foca na iteração rápida e na resolução de problemas práticos de interface e performance. Como estudante, utilizo a assistência de IA para explorar novas arquiteturas e acelerar o ciclo de desenvolvimento, focando em entregar um software funcional e acessível para a comunidade.
