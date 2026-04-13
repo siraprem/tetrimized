@@ -2,8 +2,6 @@ import 'dart:async';
 import 'dart:convert';
 import 'dart:collection';
 import 'package:flutter/material.dart';
-import 'package:flutter/gestures.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_inappwebview/flutter_inappwebview.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -304,8 +302,8 @@ class _TetrIoPageState extends State<TetrIoPage> {
               hardwareAcceleration: true, // Força hardware acceleration
               mediaPlaybackRequiresUserGesture: false, // Permite autoplay de áudio do jogo
               // Configurações específicas para WebGL
-              disableVerticalScroll: false,
-              disableHorizontalScroll: false,
+              disableVerticalScroll: true,
+              disableHorizontalScroll: true,
               disableContextMenu: true,
               // Otimizações de renderização
               incognito: false,
@@ -324,11 +322,6 @@ class _TetrIoPageState extends State<TetrIoPage> {
             },
             onConsoleMessage: (controller, consoleMessage) {
               // Logs desativados para economizar processamento
-            },
-            gestureRecognizers: <Factory<OneSequenceGestureRecognizer>>{
-              Factory<OneSequenceGestureRecognizer>(
-                () => EagerGestureRecognizer(),
-              ),
             },
             ),
 

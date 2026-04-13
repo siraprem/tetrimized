@@ -84,3 +84,6 @@ Desktop.ini
 *.dll
 *.so
 *.dylib
+
+# Goose configuration files
+GOOSE_RULES.md
