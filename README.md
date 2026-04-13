@@ -20,6 +20,18 @@ Sabe o Tetr.io, aquele jogo de Tetris online que todo mundo joga no navegador? P
 - Web (se quiser testar no navegador)
 - Windows, macOS e Linux (se tiver paciência pra configurar)
 
+## Downloads
+
+### Versões Disponíveis:
+
+**Versão Pro (Estabilidade):**
+- [tetrimized-pro.apk](https://github.com/siraprem/tetrimized/releases/latest/download/tetrimized-pro.apk) - Foco em estabilidade GPU
+
+**Versão Turbo (Performance):**
+- [tetrimized-turbo.apk](https://github.com/siraprem/tetrimized/releases/latest/download/tetrimized-turbo.apk) - Foco em performance máxima
+
+**Nota:** Os links acima sempre apontam para a versão mais recente automaticamente.
+
 ## Como rodar
 
 ### Pré-requisitos
