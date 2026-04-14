@@ -294,7 +294,7 @@ class _TetrIoPageState extends State<TetrIoPage> {
         _buttonOpacity = prefs.getDouble('button_opacity') ?? 0.4;
         _hideButtons = prefs.getBool('hide_buttons') ?? false;
       });
-      print('✅ Configurações carregadas: Opacidade=$_buttonOpacity, Hide=$_hideButtons');
+      print('✅ Settings loaded: Opacity=$_buttonOpacity, Hide=$_hideButtons');
     } catch (e) {
       print('❌ Erro ao carregar configurações: $e');
     }
@@ -305,7 +305,7 @@ class _TetrIoPageState extends State<TetrIoPage> {
       final prefs = await SharedPreferences.getInstance();
       await prefs.setDouble('button_opacity', _buttonOpacity);
       await prefs.setBool('hide_buttons', _hideButtons);
-      print('✅ Configurações salvas: Opacidade=$_buttonOpacity, Hide=$_hideButtons');
+      print('✅ Settings saved: Opacity=$_buttonOpacity, Hide=$_hideButtons');
     } catch (e) {
       print('❌ Erro ao salvar configurações: $e');
     }
@@ -511,7 +511,7 @@ class _TetrIoPageState extends State<TetrIoPage> {
                                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                         children: [
                                           const Text(
-                                            'Configurações do Tetrimized',
+                                            'Tetrimized Settings',
                                             style: TextStyle(
                                               color: Colors.white,
                                               fontSize: 18,
@@ -539,7 +539,7 @@ class _TetrIoPageState extends State<TetrIoPage> {
                                           children: [
                                             // Slider de Transparência dos Botões
                                             const Text(
-                                              'Transparência dos Botões',
+                                              'Button Opacity',
                                               style: TextStyle(
                                                 color: Colors.white,
                                                 fontSize: 16,
@@ -584,7 +584,7 @@ class _TetrIoPageState extends State<TetrIoPage> {
                                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                               children: [
                                                 const Text(
-                                                  'Esconder Botões',
+                                                  'Hide Buttons',
                                                   style: TextStyle(
                                                     color: Colors.white,
                                                     fontSize: 16,
@@ -635,7 +635,7 @@ class _TetrIoPageState extends State<TetrIoPage> {
                                                   ),
                                                 ),
                                                 child: const Text(
-                                                  'Aplicar Configurações',
+                                                  'Apply Settings',
                                                   style: TextStyle(
                                                     color: Colors.white,
                                                     fontSize: 16,
