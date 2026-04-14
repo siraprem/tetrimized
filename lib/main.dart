@@ -162,7 +162,28 @@ class _TetrIoPageState extends State<TetrIoPage> {
           }
           const type = isDown ? 'keydown' : 'keyup';
           
-          // Criar evento otimizado para performance
+          // Lógica especial para a tecla Enter (abrir chat)
+          if (key === 'Enter') {
+            const settings = {
+              key: 'Enter',
+              code: 'Enter',
+              keyCode: 13,
+              which: 13,
+              bubbles: true,
+              cancelable: true,
+              view: window
+            };
+            
+            // Disparar a sequência completa de eventos de teclado
+            document.dispatchEvent(new KeyboardEvent('keydown', settings));
+            document.dispatchEvent(new KeyboardEvent('keypress', settings));
+            document.dispatchEvent(new KeyboardEvent('keyup', settings));
+            
+            // Prevenir comportamento padrão
+            return;
+          }
+          
+          // Criar evento otimizado para performance (para outras teclas)
           let event;
           try {
             event = new KeyboardEvent(type, {
