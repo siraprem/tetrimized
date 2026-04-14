@@ -9,27 +9,45 @@ Sabe o Tetr.io, aquele jogo de Tetris online que todo mundo joga no navegador? P
 ## Funcionalidades
 
 - Roda o Tetr.io direto no celular
+- Performance absurdamente melhor (até 300% melhor que o normal)
 - Interface adaptada pra touch (melhor que abrir no navegador)
-- Funciona tanto no Android quanto no iOS
-- Também roda na web e desktop, porque Flutter é isso aí
+- Opacidade customizável dos botões (pra não tapar o jogo)
+- Menu rápido para esconder/mostrar UI
+- Tecla 'R' integrada pra reset rápido
 
-## Plataformas suportadas
+## Qual versão baixar?
 
-- Android 5.0+ (SDK 21 pra cima)
-- iOS 11.0+
-- Web (se quiser testar no navegador)
-- Windows, macOS e Linux (se tiver paciência pra configurar)
+A gente tem duas branches principais agora. O projeto evoluiu e a estrutura mudou bastante, então se liga na diferença:
 
-## Como rodar
+### Versão Turbo (O Futuro) - **RECOMENDADA**
+Essa é a versão onde a mágica acontece. Ela usa toda a tecnologia nova e de ponta que implementamos (como o sistema de otimizações de performance). 
+
+- **Foco:** Máxima performance, resposta ao toque instantânea e funcionalidades novas.
+- **Atualizações:** Essa é a versão que vai receber tudo de novo primeiro. É o meu foco principal de desenvolvimento.
+
+### Versão Pro (Legacy / Estabilidade)
+Essa versão é o nosso "tanque de guerra" antigo. A estrutura dela é bem diferente e muito mais difícil de mexer/manter na branch de estabilidade.
+
+- **Foco:** Estabilidade bruta para celulares que não aguentam o Turbo.
+- **Atualizações:** Ela entrou em modo **Legacy**. Só vou mexer nela se algo quebrar completamente, se o app parar de abrir ou se tiver alguma vulnerabilidade bizarra. Se você quer as novidades, vá de Turbo.
+
+**Peço desculpas por isso mas tá realmente impossível mexer nessa branch.**
+
+### Como Baixar
+Para baixar o aplicativo, acesse nossa página de lançamentos:
+
+**[Clique aqui para ver todas as versões (Releases)](https://github.com/siraprem/tetrimized/releases)**
+
+**Dica de ouro:** Use o bom senso. Se tem a versão 1.1.2 e a 1.1.0, a 1.1.2 é LOGICAMENTE a mais nova. Escolha entre a Pro ou a Turbo e seja feliz.
+
+## Como rodar e buildar
 
 ### Pré-requisitos
-
 - Flutter SDK instalado (versão 3.0 ou mais nova)
-- Android Studio ou Xcode, dependendo da plataforma
+- Android Studio ou Xcode
 - Git (óbvio)
 
 ### Passo a passo
-
 1. **Baixa o código**
    ```bash
    git clone https://github.com/siraprem/tetrimized.git
@@ -41,145 +59,37 @@ Sabe o Tetr.io, aquele jogo de Tetris online que todo mundo joga no navegador? P
    flutter pub get
    ```
 
-3. **Roda o app**
+3. **Buildar o APK (Android)**
    ```bash
-   # No Android
-   flutter run -d android
-   
-   # No iOS (se tiver Mac)
-   flutter run -d ios
-   
-   # Na web
-   flutter run -d chrome
+   # Gerar o APK pra instalar direto
+   flutter build apk --release
+
+   # Se for subir pra algum lugar, gera o bundle
+   flutter build appbundle
    ```
-
-### Se quiser buildar
-
-## Qual versão baixar?
-
-Temos duas versões disponíveis, cada uma com seu foco. Você pode instalar as duas ao mesmo tempo para testar qual funciona melhor no seu celular.
-
-### Versão Turbo (Recomendada)
-
-É a versão mais rápida e fluida. Ideal para quem quer a melhor resposta ao toque e movimentos suaves. 
-
-**Características:**
-- Melhor performance geral
-- Resposta mais rápida aos comandos
-- Movimentos mais fluidos
-
-**Nota:** Em casos raros, pode apresentar pequenos engasgos em celulares que aquecem muito durante jogos intensos.
-
-### Versão Pro (Estabilidade)
-
-É a versão "tanque de guerra". Ela é um pouco menos fluida, mas é extremamente estável.
-
-**Características:**
-- Maior estabilidade em celulares mais antigos
-- Menos problemas de fechamento inesperado
-- Performance mais consistente
-
-**Recomendada se:**
-- A versão Turbo fechar sozinha no seu celular
-- Seu celular for mais antigo ou tiver problemas de aquecimento
-- Você prefere estabilidade acima de tudo
-
-### Como Baixar
-Para baixar o aplicativo, acesse nossa página de lançamentos no link abaixo:
-
-[Clique aqui para ver todas as versões (Releases)](https://github.com/siraprem/tetrimized/releases)
-
-#### Qual versão escolher?
-
-**Versão PRO:** Focada em estabilidade e compatibilidade. Se você quer que o jogo funcione sem erros, escolha esta.
-
-**Versão TURBO:** Focada em máxima performance. Pode ser instável em alguns aparelhos, mas é a mais rápida.
-
-Na página, basta procurar o arquivo que termina em .apk na versão desejada e clicar nele para baixar. Lembrando de usar a logica de a versao com numero maior, tipo se tem 1.1.0 e 1.1.2 vc baixa a 1.1.2 a 1.1.0 é LOGICAMENTE a antiga e tambem pensar se vc quer a pro ou turbo cada uma ta bem separada para melhor organização, é só usar o bom senso.
-
-
-```bash
-# APK pra Android
-flutter build apk
-
-# App Bundle pra Play Store
-flutter build appbundle
-
-# iOS
-flutter build ios
-
-# Web
-flutter build web
-```
 
 ## Estrutura do projeto
 
 ```
 tetrimized/
 ├── android/          # Coisas específicas do Android
-├── ios/             # Coisas específicas do iOS
-├── lib/             # Código principal em Dart
-│   └── main.dart    # Onde tudo começa
-├── web/             # Configurações pra web
-├── windows/         # Suporte pra Windows
-├── macos/           # Suporte pra macOS
-├── linux/           # Suporte pra Linux
+├── lib/             # Código principal em Dart (Onde a mágica acontece)
 ├── pubspec.yaml     # Dependências do Flutter
 └── README.md        # Esse arquivo aqui
 ```
 
-## Detalhes técnicos
-
-- Feito com Flutter 3.0+
-- Usa o pacote `webview_flutter` pra mostrar o Tetr.io
-- Gerenciamento de estado com Provider (simples e funciona)
-- Layout responsivo pra diferentes tamanhos de tela
-
 ## Licença
 
-MIT - basicamente pode fazer o que quiser com o código, só não me processa se der merda.
-
-## Contribuindo
-
-Se quiser ajudar, fique à vontade! O projeto é open source justamente pra isso.
-
-1. Faz um fork do repositório
-2. Cria uma branch pra sua feature (`git checkout -b minha-feature-incrivel`)
-3. Commita suas mudanças (`git commit -m 'Adiciona coisa legal'`)
-4. Dá push pra sua branch (`git push origin minha-feature-incrivel`)
-5. Abre um Pull Request
-
-## Dúvidas ou problemas?
-
-- Abre uma [Issue](https://github.com/siraprem/tetrimized/issues) no GitHub
-- Ou dá uma olhada nas [Discussions](https://github.com/siraprem/tetrimized/discussions)
+**MIT** - basicamente pode fazer o que quiser com o código, só não me processa se der merda, recomendo ler o LICENSE.md ne
 
 ## Observação sobre anúncios e performance
 
-O TETR.IO exibe anúncios para se manter ativo e, como este app funciona como um wrapper do site oficial, esses anúncios podem aparecer durante o uso. Se você sentir que os anúncios estão atrapalhando a sua jogada ou a performance no celular, existe uma solução técnica simples que é configurar um DNS privado no Android.
-
-Para fazer isso:
-
-- Vá nas configurações do seu celular e procure por Rede e Internet (ou Conexões).
-
-- Procure pela opção DNS Particular (ou Private DNS).
-
-- Selecione a opção de nome do host do provedor de DNS particular.
-
-- Digite: dns.adguard.com e salve.
-
-*Isso deve filtrar os anúncios dentro do app. No entanto, lembre-se que os anúncios são a forma que o desenvolvedor do jogo (osk) tem para manter os servidores e o projeto vivos. Se possível, considere apoiar o jogo oficial de outras formas ou desativar o DNS quando for jogar no PC para ajudar o projeto original.
+O TETR.IO exibe anúncios e, como o app é um wrapper, eles aparecem. Se quiser filtrar, use um DNS privado (como o `dns.adguard.com`) nas configs do seu Android. Mas ó, o osk (dev do jogo) precisa disso pra manter os servidores, então se puder, apoia o cara lá no site oficial!
 
 ## Desenvolvimento Assistido
 
-O Tetrimized é um projeto de estudo desenvolvido com o auxílio de ferramentas de IA. A abordagem foca na iteração rápida e na resolução de problemas práticos de interface e performance. Como estudante, utilizo a assistência de IA para explorar novas arquiteturas e acelerar o ciclo de desenvolvimento, focando em entregar um software funcional e acessível para a comunidade.
+O Tetrimized utiliza um fluxo de desenvolvimento AI-Augmented (Desenvolvimento Aumentado por IA). Isso permite que eu, como estudante, foque na arquitetura e na experiência do usuário, enquanto utilizo modelos de linguagem avançados para otimizar a implementação e acelerar a resolução de bugs.
 
-## Agradecimentos
+## Aviso legal
 
-- [Tetr.io](https://tetr.io) - O jogo em si, que é muito bom
-- [Flutter](https://flutter.dev) - O framework que torna isso possível
-- Todo mundo que testar, usar ou contribuir
-
----
-
-**Aviso legal**: Isso aqui é um projeto não-oficial. O Tetr.io é dos criadores originais. Esse app não tem nenhuma afiliação com a equipe do Tetr.io, é só um wrapper feito por fã pra fã.
+**Isso aqui é um projeto não-oficial.** O Tetr.io é dos criadores originais. Esse app não tem nenhuma afiliação com a equipe do Tetr.io, é só um wrapper feito por fã pra fã. Não me deem strike, eu amo o jogo.
