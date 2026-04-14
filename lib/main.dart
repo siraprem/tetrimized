@@ -192,7 +192,7 @@ class _TetrIoPageState extends State<TetrIoPage> {
           }
           
           // Prevenir comportamento padrão apenas para teclas de jogo
-          if (['ArrowLeft','ArrowRight','ArrowDown',' ','z','x','a','c','Escape'].includes(key)) {
+          if (['ArrowLeft','ArrowRight','ArrowDown',' ','z','x','a','c','Escape','r','Enter'].includes(key)) {
             event.preventDefault();
           }
         };
@@ -269,6 +269,8 @@ class _TetrIoPageState extends State<TetrIoPage> {
         ControlButton(id: 'rot180', label: 'A', key: 'a', keyCode: 65, code: 'KeyA', x: 610, y: 330),
         ControlButton(id: 'hold', label: 'C', key: 'c', keyCode: 67, code: 'KeyC', x: 610, y: 140),
         ControlButton(id: 'pause', label: 'ESC', key: 'Escape', keyCode: 27, code: 'Escape', x: 20, y: 20, size: 50),
+        ControlButton(id: 'r_key', label: 'R', key: 'r', keyCode: 82, code: 'KeyR', x: 90, y: 20, size: 50),
+        ControlButton(id: 'enter_key', label: 'ENTER', key: 'Enter', keyCode: 13, code: 'Enter', x: 160, y: 20, size: 50),
       ];
     });
     print('✅ Botões padrão carregados: ${_buttons.length} botões');
