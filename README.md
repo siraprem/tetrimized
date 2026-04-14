@@ -1,3 +1,5 @@
+[English version available here](./README_EN.md)
+
 # Tetrimized - Um Wrapper Mobile para o Tetr.io
 
 Um app mobile feito em Flutter para jogar o Tetr.io no celular. Basicamente é um wrapper que roda o site do Tetr.io dentro de um WebView, mas com algumas adaptações pra ficar mais legal no mobile.
