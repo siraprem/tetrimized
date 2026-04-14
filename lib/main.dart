@@ -98,6 +98,9 @@ class _TetrIoPageState extends State<TetrIoPage> {
   double _baseScaleSize = 80.0;
   bool _isEditMode = false;
   bool _hapticEnabled = true;
+  bool _showSettingsMenu = false;
+  double _buttonOpacity = 0.4;
+  bool _hideButtons = false;
   final Map<String, bool> _buttonStates = {};
   String? _selectedButtonId;
 
@@ -106,6 +109,7 @@ class _TetrIoPageState extends State<TetrIoPage> {
     super.initState();
     print('🚀 TetrIoPage iniciando...');
     _loadButtons();
+    _loadSettings();
   }
 
   @override
@@ -283,6 +287,30 @@ class _TetrIoPageState extends State<TetrIoPage> {
     }
   }
 
+  Future<void> _loadSettings() async {
+    try {
+      final prefs = await SharedPreferences.getInstance();
+      setState(() {
+        _buttonOpacity = prefs.getDouble('button_opacity') ?? 0.4;
+        _hideButtons = prefs.getBool('hide_buttons') ?? false;
+      });
+      print('✅ Configurações carregadas: Opacidade=$_buttonOpacity, Hide=$_hideButtons');
+    } catch (e) {
+      print('❌ Erro ao carregar configurações: $e');
+    }
+  }
+
+  Future<void> _saveSettings() async {
+    try {
+      final prefs = await SharedPreferences.getInstance();
+      await prefs.setDouble('button_opacity', _buttonOpacity);
+      await prefs.setBool('hide_buttons', _hideButtons);
+      print('✅ Configurações salvas: Opacidade=$_buttonOpacity, Hide=$_hideButtons');
+    } catch (e) {
+      print('❌ Erro ao salvar configurações: $e');
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -380,6 +408,16 @@ class _TetrIoPageState extends State<TetrIoPage> {
                         },
                         color: (_isEditMode ? Colors.green : Colors.orange).withOpacity(0.6),
                       ),
+                      const SizedBox(width: 10),
+                      _buildTopActionButton(
+                        icon: Icons.settings,
+                        onPressed: () {
+                          setState(() {
+                            _showSettingsMenu = !_showSettingsMenu;
+                          });
+                        },
+                        color: Colors.purple.withOpacity(0.6),
+                      ),
                     ],
                   ),
                 ),
@@ -414,6 +452,208 @@ class _TetrIoPageState extends State<TetrIoPage> {
                           ),
                           const Icon(Icons.photo_size_select_large, color: Colors.white),
                         ],
+                      ),
+                    ),
+                  ),
+
+                // Menu de Configurações (Glassmorphism)
+                if (_showSettingsMenu)
+                  Positioned.fill(
+                    child: Container(
+                      color: Colors.black.withOpacity(0.3),
+                      child: Center(
+                        child: Container(
+                          width: MediaQuery.of(context).size.width * 0.8,
+                          height: MediaQuery.of(context).size.height * 0.6,
+                          decoration: BoxDecoration(
+                            color: Colors.white.withOpacity(0.1),
+                            borderRadius: BorderRadius.circular(20),
+                            border: Border.all(color: Colors.white.withOpacity(0.2)),
+                            boxShadow: [
+                              BoxShadow(
+                                color: Colors.black.withOpacity(0.3),
+                                blurRadius: 20,
+                                spreadRadius: 5,
+                              ),
+                            ],
+                          ),
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(20),
+                            child: BackdropFilter(
+                              filter: const ColorFilter.mode(
+                                Colors.transparent,
+                                BlendMode.srcOver,
+                              ),
+                              child: Container(
+                                decoration: BoxDecoration(
+                                  gradient: LinearGradient(
+                                    begin: Alignment.topLeft,
+                                    end: Alignment.bottomRight,
+                                    colors: [
+                                      Colors.white.withOpacity(0.15),
+                                      Colors.white.withOpacity(0.05),
+                                    ],
+                                  ),
+                                ),
+                                child: Column(
+                                  children: [
+                                    // Cabeçalho do Menu
+                                    Container(
+                                      padding: const EdgeInsets.all(16),
+                                      decoration: BoxDecoration(
+                                        color: Colors.black.withOpacity(0.3),
+                                        borderRadius: const BorderRadius.only(
+                                          topLeft: Radius.circular(20),
+                                          topRight: Radius.circular(20),
+                                        ),
+                                      ),
+                                      child: Row(
+                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                        children: [
+                                          const Text(
+                                            'Configurações do Tetrimized',
+                                            style: TextStyle(
+                                              color: Colors.white,
+                                              fontSize: 18,
+                                              fontWeight: FontWeight.bold,
+                                            ),
+                                          ),
+                                          IconButton(
+                                            icon: const Icon(Icons.close, color: Colors.white),
+                                            onPressed: () {
+                                              setState(() {
+                                                _showSettingsMenu = false;
+                                              });
+                                            },
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                    
+                                    // Conteúdo do Menu
+                                    Expanded(
+                                      child: Padding(
+                                        padding: const EdgeInsets.all(20),
+                                        child: Column(
+                                          crossAxisAlignment: CrossAxisAlignment.start,
+                                          children: [
+                                            // Slider de Transparência dos Botões
+                                            const Text(
+                                              'Transparência dos Botões',
+                                              style: TextStyle(
+                                                color: Colors.white,
+                                                fontSize: 16,
+                                                fontWeight: FontWeight.w500,
+                                              ),
+                                            ),
+                                            const SizedBox(height: 8),
+                                            Row(
+                                              children: [
+                                                const Icon(Icons.opacity, color: Colors.white70, size: 20),
+                                                const SizedBox(width: 10),
+                                                Expanded(
+                                                  child: Slider(
+                                                    value: _buttonOpacity,
+                                                    min: 0.1,
+                                                    max: 0.8,
+                                                    divisions: 7,
+                                                    onChanged: (value) {
+                                                      setState(() {
+                                                        _buttonOpacity = value;
+                                                      });
+                                                    },
+                                                    activeColor: Colors.purpleAccent,
+                                                    inactiveColor: Colors.white30,
+                                                  ),
+                                                ),
+                                                const SizedBox(width: 10),
+                                                Text(
+                                                  '${(_buttonOpacity * 100).round()}%',
+                                                  style: const TextStyle(
+                                                    color: Colors.white,
+                                                    fontSize: 14,
+                                                  ),
+                                                ),
+                                              ],
+                                            ),
+                                            
+                                            const SizedBox(height: 20),
+                                            
+                                            // Toggle para Esconder Botões
+                                            Row(
+                                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                              children: [
+                                                const Text(
+                                                  'Esconder Botões',
+                                                  style: TextStyle(
+                                                    color: Colors.white,
+                                                    fontSize: 16,
+                                                    fontWeight: FontWeight.w500,
+                                                  ),
+                                                ),
+                                                Switch(
+                                                  value: _hideButtons,
+                                                  onChanged: (value) {
+                                                    setState(() {
+                                                      _hideButtons = value;
+                                                    });
+                                                  },
+                                                  activeThumbColor: Colors.purpleAccent,
+                                                  activeTrackColor: Colors.purpleAccent.withOpacity(0.5),
+                                                  inactiveTrackColor: Colors.grey,
+                                                ),
+                                              ],
+                                            ),
+                                            
+                                            const SizedBox(height: 10),
+                                            Text(
+                                              _hideButtons 
+                                                ? 'Os botões estão ocultos. Toque na tela para mostrar temporariamente.'
+                                                : 'Os botões estão visíveis.',
+                                              style: TextStyle(
+                                                color: Colors.white.withOpacity(0.7),
+                                                fontSize: 12,
+                                              ),
+                                            ),
+                                            
+                                            const Spacer(),
+                                            
+                                            // Botão de Aplicar
+                                            Center(
+                                              child: ElevatedButton(
+                                                onPressed: () {
+                                                  setState(() {
+                                                    _showSettingsMenu = false;
+                                                    _saveSettings();
+                                                  });
+                                                },
+                                                style: ElevatedButton.styleFrom(
+                                                  backgroundColor: Colors.purpleAccent,
+                                                  padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 12),
+                                                  shape: RoundedRectangleBorder(
+                                                    borderRadius: BorderRadius.circular(30),
+                                                  ),
+                                                ),
+                                                child: const Text(
+                                                  'Aplicar Configurações',
+                                                  style: TextStyle(
+                                                    color: Colors.white,
+                                                    fontSize: 16,
+                                                    fontWeight: FontWeight.bold,
+                                                  ),
+                                                ),
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
                       ),
                     ),
                   ),
@@ -458,7 +698,7 @@ class _TetrIoPageState extends State<TetrIoPage> {
                 }
               : null,
           child: Opacity(
-            opacity: _isEditMode ? 0.8 : 0.4,
+            opacity: _hideButtons ? 0.0 : (_isEditMode ? 0.8 : _buttonOpacity),
             child: Container(
               width: btn.size,
               height: btn.size,
