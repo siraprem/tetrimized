@@ -326,7 +326,13 @@ class _TetrIoPageState extends State<TetrIoPage> {
               // Logs desativados para economizar processamento
             },
             gestureRecognizers: <Factory<OneSequenceGestureRecognizer>>{
-              Factory<OneSequenceGestureRecognizer>(
+              Factory<VerticalDragGestureRecognizer>(
+                () => VerticalDragGestureRecognizer(),
+              ),
+              Factory<HorizontalDragGestureRecognizer>(
+                () => HorizontalDragGestureRecognizer(),
+              ),
+              Factory<EagerGestureRecognizer>(
                 () => EagerGestureRecognizer(),
               ),
             },
