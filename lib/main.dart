@@ -242,6 +242,9 @@ class _TetrIoPageState extends State<TetrIoPage> {
             _buttons = decoded.map((e) => ControlButton.fromJson(e)).toList();
           });
           print('✅ Botões carregados com sucesso: ${_buttons.length} botões');
+          
+          // Verificar e injetar botões padrão faltantes
+          _injectMissingDefaultButtons();
         } catch (e) {
           print('❌ Erro ao decodificar JSON: $e');
           print('❌ JSON recebido: $buttonsJson');
@@ -269,11 +272,84 @@ class _TetrIoPageState extends State<TetrIoPage> {
         ControlButton(id: 'rot180', label: 'A', key: 'a', keyCode: 65, code: 'KeyA', x: 610, y: 330),
         ControlButton(id: 'hold', label: 'C', key: 'c', keyCode: 67, code: 'KeyC', x: 610, y: 140),
         ControlButton(id: 'pause', label: 'ESC', key: 'Escape', keyCode: 27, code: 'Escape', x: 20, y: 20, size: 50),
-        ControlButton(id: 'r_key', label: 'R', key: 'r', keyCode: 82, code: 'KeyR', x: 90, y: 20, size: 50),
-        ControlButton(id: 'enter_key', label: 'ENTER', key: 'Enter', keyCode: 13, code: 'Enter', x: 160, y: 20, size: 50),
+        ControlButton(id: 'reset', label: 'R', key: 'r', keyCode: 82, code: 'KeyR', x: 80, y: 20, size: 50),
+        ControlButton(id: 'chat', label: 'ENTER', key: 'Enter', keyCode: 13, code: 'Enter', x: 140, y: 20, size: 50),
       ];
     });
     print('✅ Botões padrão carregados: ${_buttons.length} botões');
+  }
+
+  void _injectMissingDefaultButtons() {
+    // Lista de IDs de botões padrão obrigatórios
+    final defaultButtonIds = [
+      'left', 'right', 'soft', 'hard', 'rotL', 'rotR', 'rot180', 'hold', 'pause', 'reset', 'chat'
+    ];
+    
+    // IDs dos botões atualmente carregados
+    final loadedIds = _buttons.map((btn) => btn.id).toList();
+    
+    // Encontrar IDs faltantes
+    final missingIds = defaultButtonIds.where((id) => !loadedIds.contains(id)).toList();
+    
+    if (missingIds.isNotEmpty) {
+      print('⚠️ Botões padrão faltantes detectados: $missingIds');
+      print('🔄 Injetando botões faltantes automaticamente...');
+      
+      setState(() {
+        // Adicionar botões padrão faltantes
+        for (final id in missingIds) {
+          ControlButton? defaultButton;
+          
+          // Definir o botão padrão baseado no ID
+          switch (id) {
+            case 'left':
+              defaultButton = ControlButton(id: 'left', label: '←', key: 'ArrowLeft', keyCode: 37, code: 'ArrowLeft', x: 20, y: 250);
+              break;
+            case 'right':
+              defaultButton = ControlButton(id: 'right', label: '→', key: 'ArrowRight', keyCode: 39, code: 'ArrowRight', x: 140, y: 250);
+              break;
+            case 'soft':
+              defaultButton = ControlButton(id: 'soft', label: '↓', key: 'ArrowDown', keyCode: 40, code: 'ArrowDown', x: 80, y: 330);
+              break;
+            case 'hard':
+              defaultButton = ControlButton(id: 'hard', label: 'SPACE', key: ' ', keyCode: 32, code: 'Space', x: 80, y: 170);
+              break;
+            case 'rotL':
+              defaultButton = ControlButton(id: 'rotL', label: 'Z', key: 'z', keyCode: 90, code: 'KeyZ', x: 550, y: 250);
+              break;
+            case 'rotR':
+              defaultButton = ControlButton(id: 'rotR', label: 'X', key: 'x', keyCode: 88, code: 'KeyX', x: 670, y: 250);
+              break;
+            case 'rot180':
+              defaultButton = ControlButton(id: 'rot180', label: 'A', key: 'a', keyCode: 65, code: 'KeyA', x: 610, y: 330);
+              break;
+            case 'hold':
+              defaultButton = ControlButton(id: 'hold', label: 'C', key: 'c', keyCode: 67, code: 'KeyC', x: 610, y: 140);
+              break;
+            case 'pause':
+              defaultButton = ControlButton(id: 'pause', label: 'ESC', key: 'Escape', keyCode: 27, code: 'Escape', x: 20, y: 20, size: 50);
+              break;
+            case 'reset':
+              defaultButton = ControlButton(id: 'reset', label: 'R', key: 'r', keyCode: 82, code: 'KeyR', x: 80, y: 20, size: 50);
+              break;
+            case 'chat':
+              defaultButton = ControlButton(id: 'chat', label: 'ENTER', key: 'Enter', keyCode: 13, code: 'Enter', x: 140, y: 20, size: 50);
+              break;
+          }
+          
+          if (defaultButton != null) {
+            _buttons.add(defaultButton);
+            print('   ✅ Injetado: $id (${defaultButton.label})');
+          }
+        }
+      });
+      
+      // Salvar a lista atualizada
+      _saveButtons();
+      print('✅ Injeção concluída. Total de botões: ${_buttons.length}');
+    } else {
+      print('✅ Todos os botões padrão estão presentes na lista carregada.');
+    }
   }
 
   Future<void> _saveButtons() async {
