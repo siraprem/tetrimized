@@ -1,0 +1,354 @@
+Resolving dependencies...
+Downloading packages...
+  matcher 0.12.18 (0.12.19 available)
+  meta 1.17.0 (1.18.2 available)
+  test_api 0.7.9 (0.7.11 available)
+  vector_math 2.2.0 (2.3.0 available)
+Got dependencies!
+4 packages have newer versions incompatible with dependency constraints.
+Try `flutter pub outdated` for more information.
+Analyzing tetr_io_wrapper...                                    
+
+warning • Unused import: 'package:flutter/services.dart' • advanced_benchmark.dart:5:8 • unused_import
+  error • The name 'FrameTiming' isn't a type, so it can't be used as a type argument • advanced_benchmark.dart:58:24 • non_type_as_type_argument
+   info • Don't invoke 'print' in production code • advanced_benchmark.dart:254:5 • avoid_print
+   info • Don't invoke 'print' in production code • advanced_benchmark.dart:255:5 • avoid_print
+   info • Don't invoke 'print' in production code • advanced_benchmark.dart:256:5 • avoid_print
+   info • Don't invoke 'print' in production code • advanced_benchmark.dart:258:5 • avoid_print
+   info • Don't invoke 'print' in production code • advanced_benchmark.dart:259:5 • avoid_print
+   info • Don't invoke 'print' in production code • advanced_benchmark.dart:281:5 • avoid_print
+   info • Don't invoke 'print' in production code • advanced_benchmark.dart:282:5 • avoid_print
+   info • Don't invoke 'print' in production code • advanced_benchmark.dart:283:5 • avoid_print
+   info • Unnecessary braces in a string interpolation • advanced_benchmark.dart:283:12 • unnecessary_brace_in_string_interps
+   info • Don't invoke 'print' in production code • advanced_benchmark.dart:284:5 • avoid_print
+   info • Unnecessary braces in a string interpolation • advanced_benchmark.dart:284:12 • unnecessary_brace_in_string_interps
+   info • Don't invoke 'print' in production code • advanced_benchmark.dart:286:5 • avoid_print
+   info • Don't invoke 'print' in production code • advanced_benchmark.dart:287:5 • avoid_print
+   info • Don't invoke 'print' in production code • advanced_benchmark.dart:298:5 • avoid_print
+   info • Don't invoke 'print' in production code • advanced_benchmark.dart:299:5 • avoid_print
+   info • Don't invoke 'print' in production code • advanced_benchmark.dart:310:5 • avoid_print
+   info • Don't invoke 'print' in production code • advanced_benchmark.dart:311:5 • avoid_print
+   info • Don't invoke 'print' in production code • advanced_benchmark.dart:317:5 • avoid_print
+   info • Use interpolation to compose strings and values • advanced_benchmark.dart:317:11 • prefer_interpolation_to_compose_strings
+   info • Don't invoke 'print' in production code • advanced_benchmark.dart:318:5 • avoid_print
+   info • Don't invoke 'print' in production code • advanced_benchmark.dart:326:7 • avoid_print
+   info • Don't invoke 'print' in production code • advanced_benchmark.dart:328:7 • avoid_print
+   info • Don't invoke 'print' in production code • advanced_benchmark.dart:330:7 • avoid_print
+   info • Don't invoke 'print' in production code • advanced_benchmark.dart:332:7 • avoid_print
+   info • Don't invoke 'print' in production code • advanced_benchmark.dart:368:5 • avoid_print
+   info • Don't invoke 'print' in production code • advanced_benchmark.dart:369:5 • avoid_print
+   info • Don't invoke 'print' in production code • advanced_benchmark.dart:374:3 • avoid_print
+   info • Don't invoke 'print' in production code • advanced_benchmark.dart:375:3 • avoid_print
+   info • Don't invoke 'print' in production code • advanced_benchmark.dart:378:3 • avoid_print
+   info • Don't invoke 'print' in production code • advanced_benchmark.dart:379:3 • avoid_print
+   info • Don't invoke 'print' in production code • advanced_benchmark.dart:390:3 • avoid_print
+   info • Don't invoke 'print' in production code • advanced_benchmark.dart:393:3 • avoid_print
+   info • Don't invoke 'print' in production code • advanced_benchmark.dart:394:3 • avoid_print
+   info • Don't invoke 'print' in production code • advanced_benchmark.dart:404:3 • avoid_print
+   info • Don't invoke 'print' in production code • advanced_benchmark.dart:410:3 • avoid_print
+   info • Don't invoke 'print' in production code • advanced_benchmark.dart:411:3 • avoid_print
+   info • Don't invoke 'print' in production code • advanced_benchmark.dart:418:3 • avoid_print
+   info • Don't invoke 'print' in production code • advanced_benchmark.dart:419:3 • avoid_print
+   info • Don't invoke 'print' in production code • advanced_benchmark.dart:422:5 • avoid_print
+   info • Don't invoke 'print' in production code • advanced_benchmark.dart:423:5 • avoid_print
+   info • Don't invoke 'print' in production code • advanced_benchmark.dart:425:5 • avoid_print
+   info • Don't invoke 'print' in production code • advanced_benchmark.dart:426:5 • avoid_print
+   info • Don't invoke 'print' in production code • advanced_benchmark.dart:428:5 • avoid_print
+   info • Don't invoke 'print' in production code • advanced_benchmark.dart:429:5 • avoid_print
+   info • Don't invoke 'print' in production code • advanced_benchmark.dart:431:5 • avoid_print
+   info • Don't invoke 'print' in production code • advanced_benchmark.dart:432:5 • avoid_print
+   info • Don't invoke 'print' in production code • advanced_benchmark.dart:438:5 • avoid_print
+   info • Don't invoke 'print' in production code • advanced_benchmark.dart:439:5 • avoid_print
+   info • Don't invoke 'print' in production code • advanced_benchmark.dart:444:7 • avoid_print
+   info • Don't invoke 'print' in production code • advanced_benchmark.dart:446:7 • avoid_print
+   info • Don't invoke 'print' in production code • advanced_benchmark.dart:449:5 • avoid_print
+   info • Don't invoke 'print' in production code • advanced_benchmark.dart:450:5 • avoid_print
+   info • Don't invoke 'print' in production code • advanced_benchmark.dart:454:3 • avoid_print
+   info • Don't invoke 'print' in production code • advanced_benchmark.dart:455:3 • avoid_print
+   info • Don't invoke 'print' in production code • advanced_benchmark.dart:476:3 • avoid_print
+   info • Don't invoke 'print' in production code • advanced_benchmark.dart:477:3 • avoid_print
+   info • Don't invoke 'print' in production code • advanced_benchmark.dart:482:5 • avoid_print
+   info • Don't invoke 'print' in production code • advanced_benchmark.dart:484:5 • avoid_print
+   info • Don't invoke 'print' in production code • advanced_benchmark.dart:486:5 • avoid_print
+   info • Don't invoke 'print' in production code • advanced_benchmark.dart:490:3 • avoid_print
+   info • Use interpolation to compose strings and values • advanced_benchmark.dart:490:9 • prefer_interpolation_to_compose_strings
+   info • Don't invoke 'print' in production code • advanced_benchmark.dart:491:3 • avoid_print
+   info • Don't invoke 'print' in production code • advanced_benchmark.dart:492:3 • avoid_print
+   info • Don't invoke 'print' in production code • advanced_benchmark.dart:504:3 • avoid_print
+   info • Don't invoke 'print' in production code • advanced_benchmark.dart:506:5 • avoid_print
+   info • Don't invoke 'print' in production code • advanced_benchmark.dart:509:3 • avoid_print
+   info • Don't invoke 'print' in production code • advanced_benchmark.dart:512:5 • avoid_print
+   info • Don't invoke 'print' in production code • advanced_benchmark.dart:513:5 • avoid_print
+   info • Don't invoke 'print' in production code • advanced_benchmark.dart:515:5 • avoid_print
+   info • Don't invoke 'print' in production code • advanced_benchmark.dart:516:5 • avoid_print
+   info • Don't invoke 'print' in production code • advanced_benchmark.dart:518:5 • avoid_print
+   info • Don't invoke 'print' in production code • advanced_benchmark.dart:519:5 • avoid_print
+  error • The name 'FrameTiming' isn't a type, so it can't be used as a type argument • benchmark_app.dart:56:24 • non_type_as_type_argument
+warning • The value of the local variable 'jsCode' isn't used • benchmark_app.dart:120:15 • unused_local_variable
+   info • Don't invoke 'print' in production code • benchmark_app.dart:247:5 • avoid_print
+   info • Use interpolation to compose strings and values • benchmark_app.dart:247:11 • prefer_interpolation_to_compose_strings
+   info • Don't invoke 'print' in production code • benchmark_app.dart:248:5 • avoid_print
+   info • Don't invoke 'print' in production code • benchmark_app.dart:249:5 • avoid_print
+   info • Don't invoke 'print' in production code • benchmark_app.dart:292:5 • avoid_print
+   info • Don't invoke 'print' in production code • benchmark_app.dart:293:5 • avoid_print
+   info • Don't invoke 'print' in production code • benchmark_app.dart:294:5 • avoid_print
+   info • Don't invoke 'print' in production code • benchmark_app.dart:300:5 • avoid_print
+   info • Use interpolation to compose strings and values • benchmark_app.dart:300:11 • prefer_interpolation_to_compose_strings
+   info • Don't invoke 'print' in production code • benchmark_app.dart:301:5 • avoid_print
+   info • Don't invoke 'print' in production code • benchmark_app.dart:302:5 • avoid_print
+   info • Don't invoke 'print' in production code • benchmark_app.dart:305:7 • avoid_print
+   info • Don't invoke 'print' in production code • benchmark_app.dart:306:7 • avoid_print
+   info • Don't invoke 'print' in production code • benchmark_app.dart:308:7 • avoid_print
+   info • Don't invoke 'print' in production code • benchmark_app.dart:309:7 • avoid_print
+   info • Don't invoke 'print' in production code • benchmark_app.dart:313:7 • avoid_print
+   info • Don't invoke 'print' in production code • benchmark_app.dart:315:7 • avoid_print
+   info • Don't invoke 'print' in production code • benchmark_app.dart:331:5 • avoid_print
+   info • Don't invoke 'print' in production code • benchmark_app.dart:332:5 • avoid_print
+   info • Don't invoke 'print' in production code • benchmark_app.dart:340:5 • avoid_print
+   info • Don't invoke 'print' in production code • benchmark_app.dart:341:5 • avoid_print
+   info • Don't invoke 'print' in production code • benchmark_app.dart:344:5 • avoid_print
+   info • Don't invoke 'print' in production code • benchmark_app.dart:349:5 • avoid_print
+   info • Don't invoke 'print' in production code • benchmark_app.dart:355:5 • avoid_print
+   info • Don't invoke 'print' in production code • benchmark_app.dart:360:5 • avoid_print
+   info • Don't invoke 'print' in production code • benchmark_app.dart:367:7 • avoid_print
+   info • Use interpolation to compose strings and values • benchmark_app.dart:367:13 • prefer_interpolation_to_compose_strings
+   info • Don't invoke 'print' in production code • benchmark_app.dart:368:7 • avoid_print
+   info • Don't invoke 'print' in production code • benchmark_app.dart:369:7 • avoid_print
+   info • Don't invoke 'print' in production code • benchmark_app.dart:376:9 • avoid_print
+   info • Don't invoke 'print' in production code • benchmark_app.dart:377:9 • avoid_print
+   info • Don't invoke 'print' in production code • benchmark_app.dart:378:9 • avoid_print
+   info • Don't invoke 'print' in production code • benchmark_app.dart:379:9 • avoid_print
+   info • Don't invoke 'print' in production code • benchmark_app.dart:381:9 • avoid_print
+   info • Don't invoke 'print' in production code • benchmark_app.dart:382:9 • avoid_print
+   info • Don't invoke 'print' in production code • benchmark_app.dart:383:9 • avoid_print
+   info • Don't invoke 'print' in production code • benchmark_app.dart:384:9 • avoid_print
+   info • Don't invoke 'print' in production code • benchmark_app.dart:386:9 • avoid_print
+   info • Don't invoke 'print' in production code • benchmark_app.dart:387:9 • avoid_print
+   info • Don't invoke 'print' in production code • benchmark_app.dart:388:9 • avoid_print
+   info • Don't invoke 'print' in production code • benchmark_app.dart:390:9 • avoid_print
+   info • Don't invoke 'print' in production code • benchmark_app.dart:391:9 • avoid_print
+   info • Don't invoke 'print' in production code • benchmark_app.dart:392:9 • avoid_print
+   info • Use interpolation to compose strings and values • benchmark_app.dart:409:39 • prefer_interpolation_to_compose_strings
+  error • The named parameter 'rows' is required, but there's no corresponding argument • benchmark_app.dart:446:15 • missing_required_argument
+  error • Expected to find ']' • benchmark_app.dart:449:54 • expected_token
+  error • The element type 'DataColumn' can't be assigned to the list type 'Widget' • benchmark_app.dart:450:19 • list_element_type_not_assignable
+  error • Expected to find ']' • benchmark_app.dart:450:53 • expected_token
+  error • Too many positional arguments: 0 expected, but 1 found • benchmark_app.dart:451:19 • extra_positional_arguments_could_be_named
+  error • Expected an identifier • benchmark_app.dart:452:17 • missing_identifier
+  error • Expected to find ')' • benchmark_app.dart:452:17 • expected_token
+  error • Expected to find ';' • benchmark_app.dart:484:15 • expected_token
+warning • Dead code • benchmark_app.dart:484:16 • dead_code
+  error • Expected an identifier • benchmark_app.dart:484:16 • missing_identifier
+  error • Expected to find ';' • benchmark_app.dart:484:16 • expected_token
+  error • Unexpected text ';' • benchmark_app.dart:484:16 • unexpected_token
+  error • Expected an identifier • benchmark_app.dart:485:13 • missing_identifier
+  error • Expected to find ';' • benchmark_app.dart:485:13 • expected_token
+  error • Unexpected text ';' • benchmark_app.dart:485:13 • unexpected_token
+  error • Expected an identifier • benchmark_app.dart:485:14 • missing_identifier
+  error • Expected to find ';' • benchmark_app.dart:485:14 • expected_token
+  error • Unexpected text ';' • benchmark_app.dart:485:14 • unexpected_token
+  error • Expected an identifier • benchmark_app.dart:486:11 • missing_identifier
+  error • Expected to find ';' • benchmark_app.dart:486:11 • expected_token
+  error • Unexpected text ';' • benchmark_app.dart:486:11 • unexpected_token
+  error • Expected an identifier • benchmark_app.dart:486:12 • missing_identifier
+  error • Expected to find ';' • benchmark_app.dart:486:12 • expected_token
+  error • Unexpected text ';' • benchmark_app.dart:486:12 • unexpected_token
+  error • Expected an identifier • benchmark_app.dart:487:9 • missing_identifier
+  error • Expected to find ';' • benchmark_app.dart:487:9 • expected_token
+  error • Unexpected text ';' • benchmark_app.dart:487:9 • unexpected_token
+  error • Expected an identifier • benchmark_app.dart:487:10 • missing_identifier
+  error • Expected to find ';' • benchmark_app.dart:487:10 • expected_token
+  error • Unexpected text ';' • benchmark_app.dart:487:10 • unexpected_token
+  error • Expected an identifier • benchmark_app.dart:488:7 • missing_identifier
+  error • Expected to find ';' • benchmark_app.dart:488:7 • expected_token
+  error • Unexpected text ';' • benchmark_app.dart:488:7 • unexpected_token
+  error • Expected an identifier • benchmark_app.dart:488:8 • missing_identifier
+  error • Expected to find ';' • benchmark_app.dart:488:8 • expected_token
+  error • Unexpected text ';' • benchmark_app.dart:488:8 • unexpected_token
+  error • Expected an identifier • benchmark_app.dart:489:5 • missing_identifier
+  error • Unexpected text ';' • benchmark_app.dart:489:5 • unexpected_token
+   info • Unnecessary empty statement • benchmark_app.dart:489:6 • empty_statements
+warning • The declaration '_buildRow' isn't referenced • benchmark_app.dart:492:11 • unused_element
+warning • The declaration '_calculateDiff' isn't referenced • benchmark_app.dart:510:10 • unused_element
+warning • Unused import: 'package:flutter/services.dart' • benchmark_test.dart:4:8 • unused_import
+  error • The name 'FrameTiming' isn't a type, so it can't be used as a type argument • benchmark_test.dart:30:24 • non_type_as_type_argument
+  error • The method 'max' isn't defined for the type 'PerformanceBenchmark' • benchmark_test.dart:75:53 • undefined_method
+  error • The method 'min' isn't defined for the type 'PerformanceBenchmark' • benchmark_test.dart:76:53 • undefined_method
+   info • Don't invoke 'print' in production code • benchmark_test.dart:83:3 • avoid_print
+   info • Don't invoke 'print' in production code • benchmark_test.dart:98:3 • avoid_print
+   info • Don't invoke 'print' in production code • benchmark_test.dart:99:3 • avoid_print
+   info • Don't invoke 'print' in production code • benchmark_test.dart:100:3 • avoid_print
+   info • Don't invoke 'print' in production code • benchmark_test.dart:101:3 • avoid_print
+warning • The value of the local variable 'jsCode' isn't used • benchmark_test.dart:113:11 • unused_local_variable
+   info • Don't invoke 'print' in production code • benchmark_test.dart:120:3 • avoid_print
+   info • Don't invoke 'print' in production code • benchmark_test.dart:121:3 • avoid_print
+   info • Don't invoke 'print' in production code • benchmark_test.dart:122:3 • avoid_print
+   info • Don't invoke 'print' in production code • benchmark_test.dart:123:3 • avoid_print
+   info • Don't invoke 'print' in production code • benchmark_test.dart:124:3 • avoid_print
+   info • Don't invoke 'print' in production code • benchmark_test.dart:129:3 • avoid_print
+   info • Don't invoke 'print' in production code • benchmark_test.dart:134:3 • avoid_print
+   info • Don't invoke 'print' in production code • benchmark_test.dart:135:3 • avoid_print
+   info • Don't invoke 'print' in production code • benchmark_test.dart:136:3 • avoid_print
+   info • Don't invoke 'print' in production code • benchmark_test.dart:137:3 • avoid_print
+   info • Don't invoke 'print' in production code • benchmark_test.dart:138:3 • avoid_print
+   info • Don't invoke 'print' in production code • benchmark_test.dart:139:3 • avoid_print
+   info • Don't invoke 'print' in production code • benchmark_test.dart:140:3 • avoid_print
+   info • Don't invoke 'print' in production code • benchmark_test.dart:141:3 • avoid_print
+   info • Don't invoke 'print' in production code • benchmark_test.dart:142:3 • avoid_print
+   info • Don't invoke 'print' in production code • benchmark_test.dart:143:3 • avoid_print
+   info • Don't invoke 'print' in production code • benchmark_test.dart:144:3 • avoid_print
+   info • Don't invoke 'print' in production code • benchmark_test.dart:148:3 • avoid_print
+   info • Don't invoke 'print' in production code • benchmark_test.dart:149:3 • avoid_print
+   info • Don't invoke 'print' in production code • benchmark_test.dart:154:3 • avoid_print
+   info • Don't invoke 'print' in production code • benchmark_test.dart:155:3 • avoid_print
+   info • Don't invoke 'print' in production code • benchmark_test.dart:180:3 • avoid_print
+   info • Don't invoke 'print' in production code • benchmark_test.dart:181:3 • avoid_print
+   info • The variable name 'aws_key' isn't a lowerCamelCase identifier • lib/main.dart:20:8 • non_constant_identifier_names
+warning • The value of the field '_isGameStarted' isn't used • lib/main.dart:96:8 • unused_field
+   info • The private field _baseScaleSize could be 'final' • lib/main.dart:98:10 • prefer_final_fields
+warning • The value of the field '_baseScaleSize' isn't used • lib/main.dart:98:10 • unused_field
+   info • Don't invoke 'print' in production code • lib/main.dart:211:5 • avoid_print
+warning • The declaration '_resetButtons' isn't referenced • lib/main.dart:223:8 • unused_element
+warning • The value of the local variable 'isPressed' isn't used • lib/main.dart:264:11 • unused_local_variable
+   info • Don't invoke 'print' in production code • lib/main.dart:271:11 • avoid_print
+   info • Don't invoke 'print' in production code • lib/main.dart:279:11 • avoid_print
+   info • Don't invoke 'print' in production code • lib/main.dart:283:11 • avoid_print
+   info • Don't invoke 'print' in production code • lib/main.dart:365:19 • avoid_print
+   info • Don't invoke 'print' in production code • lib/main.dart:372:19 • avoid_print
+   info • Don't invoke 'print' in production code • lib/main.dart:378:15 • avoid_print
+   info • Don't invoke 'print' in production code • lib/main.dart:382:15 • avoid_print
+   info • Don't invoke 'print' in production code • lib/main.dart:386:15 • avoid_print
+   info • Unnecessary use of 'toList' in a spread • lib/main.dart:401:41 • unnecessary_to_list_in_spreads
+   info • Don't invoke 'print' in production code • lib/main.dart:413:23 • avoid_print
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/main.dart:416:39 • deprecated_member_use
+   info • Don't invoke 'print' in production code • lib/main.dart:422:23 • avoid_print
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/main.dart:431:73 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/main.dart:447:41 • deprecated_member_use
+   info • The private field _baseScaleSize could be 'final' • lib/main_backup.dart:96:10 • prefer_final_fields
+warning • The value of the field '_baseScaleSize' isn't used • lib/main_backup.dart:96:10 • unused_field
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/main_backup.dart:323:44 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/main_backup.dart:329:43 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/main_backup.dart:343:77 • deprecated_member_use
+   info • Parameter 'value' could be a super parameter • lib/main_extreme_v2.dart:199:3 • use_super_parameters
+warning • The value of the field '_gpuPressureFrames' isn't used • lib/main_extreme_v3.dart:68:14 • unused_field
+warning • The value of the field '_gpuPressureThreshold' isn't used • lib/main_extreme_v3.dart:69:20 • unused_field
+   info • Parameter 'value' could be a super parameter • lib/main_extreme_v3.dart:228:3 • use_super_parameters
+warning • The value of the field '_gpuPressureFrames' isn't used • lib/main_extreme_v4.dart:61:14 • unused_field
+warning • The value of the field '_gpuPressureThreshold' isn't used • lib/main_extreme_v4.dart:62:20 • unused_field
+warning • The method doesn't override an inherited method • lib/main_extreme_v4.dart:202:8 • override_on_non_overriding_member
+   info • The member 'shouldRepaint' overrides an inherited member but isn't annotated with '@override' • lib/main_extreme_v4.dart:212:8 • annotate_overrides
+   info • Parameter 'value' could be a super parameter • lib/main_extreme_v4.dart:220:3 • use_super_parameters
+warning • Unused import: 'dart:ui' • lib/main_reativo.dart:4:8 • unused_import
+   info • Don't invoke 'print' in production code • lib/main_reativo.dart:50:7 • avoid_print
+   info • Don't invoke 'print' in production code • lib/main_reativo.dart:62:7 • avoid_print
+   info • Don't invoke 'print' in production code • lib/main_reativo.dart:63:7 • avoid_print
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/main_reativo.dart:105:29 • deprecated_member_use
+warning • The value of the field '_isGameStarted' isn't used • lib/main_reativo.dart:147:8 • unused_field
+warning • The value of the field '_buttonStates' isn't used • lib/main_reativo.dart:151:27 • unused_field
+   info • Don't invoke 'print' in production code • lib/main_reativo.dart:161:5 • avoid_print
+   info • Don't invoke 'print' in production code • lib/main_reativo.dart:181:7 • avoid_print
+   info • Don't invoke 'print' in production code • lib/main_reativo.dart:186:7 • avoid_print
+   info • Don't invoke 'print' in production code • lib/main_reativo.dart:189:9 • avoid_print
+   info • Don't invoke 'print' in production code • lib/main_reativo.dart:190:9 • avoid_print
+   info • Don't invoke 'print' in production code • lib/main_reativo.dart:195:11 • avoid_print
+   info • Don't invoke 'print' in production code • lib/main_reativo.dart:204:15 • avoid_print
+   info • Don't invoke 'print' in production code • lib/main_reativo.dart:206:15 • avoid_print
+   info • Don't invoke 'print' in production code • lib/main_reativo.dart:207:15 • avoid_print
+   info • Don't invoke 'print' in production code • lib/main_reativo.dart:216:11 • avoid_print
+   info • Don't invoke 'print' in production code • lib/main_reativo.dart:218:11 • avoid_print
+   info • Don't invoke 'print' in production code • lib/main_reativo.dart:219:11 • avoid_print
+   info • Don't invoke 'print' in production code • lib/main_reativo.dart:223:9 • avoid_print
+   info • Don't invoke 'print' in production code • lib/main_reativo.dart:227:7 • avoid_print
+   info • Don't invoke 'print' in production code • lib/main_reativo.dart:228:7 • avoid_print
+   info • Don't invoke 'print' in production code • lib/main_reativo.dart:234:5 • avoid_print
+   info • Don't invoke 'print' in production code • lib/main_reativo.dart:250:5 • avoid_print
+   info • Don't invoke 'print' in production code • lib/main_reativo.dart:255:7 • avoid_print
+   info • Don't invoke 'print' in production code • lib/main_reativo.dart:263:7 • avoid_print
+   info • Don't invoke 'print' in production code • lib/main_reativo.dart:264:7 • avoid_print
+   info • Don't invoke 'print' in production code • lib/main_reativo.dart:269:7 • avoid_print
+   info • Don't invoke 'print' in production code • lib/main_reativo.dart:270:7 • avoid_print
+   info • Don't invoke 'print' in production code • lib/main_reativo.dart:272:7 • avoid_print
+   info • Don't invoke 'print' in production code • lib/main_reativo.dart:273:7 • avoid_print
+   info • Uses 'await' on an instance of 'void', which is not a subtype of 'Future' • lib/main_reativo.dart:281:7 • await_only_futures
+  error • This expression has a type of 'void' so its value can't be used • lib/main_reativo.dart:281:13 • use_of_void_result
+   info • Don't invoke 'print' in production code • lib/main_reativo.dart:288:7 • avoid_print
+warning • The declaration '_findButtonAt' isn't referenced • lib/main_reativo.dart:339:18 • unused_element
+   info • Don't invoke 'print' in production code • lib/main_reativo.dart:355:7 • avoid_print
+   info • Don't invoke 'print' in production code • lib/main_reativo.dart:382:7 • avoid_print
+   info • Don't invoke 'print' in production code • lib/main_reativo.dart:420:15 • avoid_print
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/main_reativo.dart:433:47 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/main_reativo.dart:433:78 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/main_reativo.dart:434:31 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/main_reativo.dart:441:37 • deprecated_member_use
+  error • The name 'Factory' isn't a type, so it can't be used as a type argument • lib/main_reativo.dart:505:34 • non_type_as_type_argument
+  error • The name 'OneSequenceGestureRecognizer' isn't a type, so it can't be used as a type argument • lib/main_reativo.dart:505:42 • non_type_as_type_argument
+  error • The method 'Factory' isn't defined for the type '_TetrIoPageV3State' • lib/main_reativo.dart:506:15 • undefined_method
+  error • The name 'OneSequenceGestureRecognizer' isn't a type, so it can't be used as a type argument • lib/main_reativo.dart:506:23 • non_type_as_type_argument
+  error • The method 'EagerGestureRecognizer' isn't defined for the type '_TetrIoPageV3State' • lib/main_reativo.dart:507:23 • undefined_method
+   info • Don't invoke 'print' in production code • lib/main_reativo.dart:526:15 • avoid_print
+   info • 'onLoadError' is deprecated and shouldn't be used. Use onReceivedError instead • lib/main_reativo.dart:528:13 • deprecated_member_use
+   info • Don't invoke 'print' in production code • lib/main_reativo.dart:529:15 • avoid_print
+  error • The named parameter 'javascriptHandlers' isn't defined • lib/main_reativo.dart:534:13 • undefined_named_parameter
+  error • The method 'JavascriptHandler' isn't defined for the type '_TetrIoPageV3State' • lib/main_reativo.dart:535:15 • undefined_method
+   info • Don't invoke 'print' in production code • lib/main_reativo.dart:541:19 • avoid_print
+  error • The method 'JavascriptHandler' isn't defined for the type '_TetrIoPageV3State' • lib/main_reativo.dart:544:15 • undefined_method
+   info • Don't invoke 'print' in production code • lib/main_reativo.dart:550:19 • avoid_print
+  error • The getter 'vibration_off' isn't defined for the type 'Icons' • lib/main_reativo.dart:599:66 • undefined_getter
+warning • Unused import: 'dart:io' • simple_benchmark.dart:2:8 • unused_import
+   info • Don't invoke 'print' in production code • simple_benchmark.dart:6:3 • avoid_print
+   info • Don't invoke 'print' in production code • simple_benchmark.dart:7:3 • avoid_print
+   info • Don't invoke 'print' in production code • simple_benchmark.dart:12:3 • avoid_print
+   info • Don't invoke 'print' in production code • simple_benchmark.dart:15:3 • avoid_print
+   info • Don't invoke 'print' in production code • simple_benchmark.dart:18:3 • avoid_print
+   info • Use interpolation to compose strings and values • simple_benchmark.dart:18:9 • prefer_interpolation_to_compose_strings
+   info • Don't invoke 'print' in production code • simple_benchmark.dart:19:3 • avoid_print
+   info • Don't invoke 'print' in production code • simple_benchmark.dart:20:3 • avoid_print
+   info • Don't invoke 'print' in production code • simple_benchmark.dart:24:3 • avoid_print
+   info • Use interpolation to compose strings and values • simple_benchmark.dart:24:9 • prefer_interpolation_to_compose_strings
+   info • Don't invoke 'print' in production code • simple_benchmark.dart:25:3 • avoid_print
+   info • Don't invoke 'print' in production code • simple_benchmark.dart:26:3 • avoid_print
+   info • Don't invoke 'print' in production code • simple_benchmark.dart:34:5 • avoid_print
+   info • Don't invoke 'print' in production code • simple_benchmark.dart:35:5 • avoid_print
+   info • Don't invoke 'print' in production code • simple_benchmark.dart:36:5 • avoid_print
+   info • Don't invoke 'print' in production code • simple_benchmark.dart:37:5 • avoid_print
+   info • Don't invoke 'print' in production code • simple_benchmark.dart:39:5 • avoid_print
+   info • Don't invoke 'print' in production code • simple_benchmark.dart:40:5 • avoid_print
+   info • Don't invoke 'print' in production code • simple_benchmark.dart:41:5 • avoid_print
+   info • Don't invoke 'print' in production code • simple_benchmark.dart:43:5 • avoid_print
+   info • Don't invoke 'print' in production code • simple_benchmark.dart:44:5 • avoid_print
+   info • Don't invoke 'print' in production code • simple_benchmark.dart:45:5 • avoid_print
+   info • Don't invoke 'print' in production code • simple_benchmark.dart:51:5 • avoid_print
+   info • Don't invoke 'print' in production code • simple_benchmark.dart:52:5 • avoid_print
+   info • Don't invoke 'print' in production code • simple_benchmark.dart:53:5 • avoid_print
+   info • Don't invoke 'print' in production code • simple_benchmark.dart:55:5 • avoid_print
+   info • Don't invoke 'print' in production code • simple_benchmark.dart:56:5 • avoid_print
+   info • Don't invoke 'print' in production code • simple_benchmark.dart:57:5 • avoid_print
+   info • Don't invoke 'print' in production code • simple_benchmark.dart:61:3 • avoid_print
+   info • Use interpolation to compose strings and values • simple_benchmark.dart:61:9 • prefer_interpolation_to_compose_strings
+   info • Don't invoke 'print' in production code • simple_benchmark.dart:62:3 • avoid_print
+   info • Don't invoke 'print' in production code • simple_benchmark.dart:63:3 • avoid_print
+   info • Don't invoke 'print' in production code • simple_benchmark.dart:66:5 • avoid_print
+   info • Don't invoke 'print' in production code • simple_benchmark.dart:67:5 • avoid_print
+   info • Don't invoke 'print' in production code • simple_benchmark.dart:68:5 • avoid_print
+   info • Don't invoke 'print' in production code • simple_benchmark.dart:69:5 • avoid_print
+   info • Don't invoke 'print' in production code • simple_benchmark.dart:70:5 • avoid_print
+   info • Don't invoke 'print' in production code • simple_benchmark.dart:72:5 • avoid_print
+   info • Don't invoke 'print' in production code • simple_benchmark.dart:73:5 • avoid_print
+   info • Don't invoke 'print' in production code • simple_benchmark.dart:74:5 • avoid_print
+   info • Don't invoke 'print' in production code • simple_benchmark.dart:75:5 • avoid_print
+   info • Don't invoke 'print' in production code • simple_benchmark.dart:77:5 • avoid_print
+   info • Don't invoke 'print' in production code • simple_benchmark.dart:78:5 • avoid_print
+   info • Don't invoke 'print' in production code • simple_benchmark.dart:79:5 • avoid_print
+   info • Don't invoke 'print' in production code • simple_benchmark.dart:80:5 • avoid_print
+   info • Don't invoke 'print' in production code • simple_benchmark.dart:176:3 • avoid_print
+   info • Don't invoke 'print' in production code • simple_benchmark.dart:177:3 • avoid_print
+   info • Don't invoke 'print' in production code • simple_benchmark.dart:178:3 • avoid_print
+   info • Don't invoke 'print' in production code • simple_benchmark.dart:179:3 • avoid_print
+   info • Don't invoke 'print' in production code • simple_benchmark.dart:180:3 • avoid_print
+   info • Don't invoke 'print' in production code • simple_benchmark.dart:181:3 • avoid_print
+   info • Don't invoke 'print' in production code • simple_benchmark.dart:198:3 • avoid_print
+   info • Don't invoke 'print' in production code • simple_benchmark.dart:199:3 • avoid_print
+   info • Don't invoke 'print' in production code • simple_benchmark.dart:200:3 • avoid_print
+   info • Don't invoke 'print' in production code • simple_benchmark.dart:237:3 • avoid_print
+   info • Don't invoke 'print' in production code • simple_benchmark.dart:246:3 • avoid_print
+
