@@ -360,10 +360,12 @@ class _TetrIoPageState extends State<TetrIoPage> {
 
             if (_isLoading) const Center(child: CircularProgressIndicator()),
 
-            // Camada de Botões Touch (só interage se NÃO estiver oculta)
+            // Camada de Botões Touch (só interage e existe se NÃO estiver oculta)
             if (!_hideButtons || _isEditMode)
-              Stack(
-                children: _buttons.map((btn) => _buildMovableButton(btn)).toList(),
+              Positioned.fill(
+                child: Stack(
+                  children: _buttons.map((btn) => _buildMovableButton(btn)).toList(),
+                ),
               ),
 
             // Botões de Ação do Topo
@@ -576,6 +578,97 @@ class _TetrIoPageState extends State<TetrIoPage> {
                                   ),
 
                                   const SizedBox(height: 20),
+
+                                  // Exportar e Importar Layout (Backup)
+                                  const Text(
+                                    'Layout Backup',
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.w500,
+                                    ),
+                                  ),
+                                  const SizedBox(height: 8),
+                                  Row(
+                                    children: [
+                                      Expanded(
+                                        child: OutlinedButton.icon(
+                                          onPressed: () async {
+                                            final encoded = jsonEncode(_buttons.map((e) => e.toJson()).toList());
+                                            await Clipboard.setData(ClipboardData(text: encoded));
+                                            if (context.mounted) {
+                                              ScaffoldMessenger.of(context).showSnackBar(
+                                                const SnackBar(
+                                                  content: Text('Layout copiado para a área de transferência!'),
+                                                  duration: Duration(seconds: 2),
+                                                ),
+                                              );
+                                            }
+                                          },
+                                          icon: const Icon(Icons.copy, color: Colors.blueAccent),
+                                          label: const Text('Export Layout', style: TextStyle(color: Colors.blueAccent)),
+                                          style: OutlinedButton.styleFrom(
+                                            side: const BorderSide(color: Colors.blueAccent),
+                                          ),
+                                        ),
+                                      ),
+                                      const SizedBox(width: 10),
+                                      Expanded(
+                                        child: OutlinedButton.icon(
+                                          onPressed: () async {
+                                            final data = await Clipboard.getData(Clipboard.kTextPlain);
+                                            final text = data?.text?.trim();
+                                            if (text == null || text.isEmpty) {
+                                              if (context.mounted) {
+                                                ScaffoldMessenger.of(context).showSnackBar(
+                                                  const SnackBar(
+                                                    content: Text('Área de transferência vazia!'),
+                                                    duration: Duration(seconds: 2),
+                                                  ),
+                                                );
+                                              }
+                                              return;
+                                            }
+                                            try {
+                                              final List<dynamic> decoded = jsonDecode(text);
+                                              final imported = decoded.map((e) => ControlButton.fromJson(e)).toList();
+                                              if (imported.isNotEmpty) {
+                                                setState(() {
+                                                  _buttons = imported;
+                                                });
+                                                _injectMissingDefaultButtons();
+                                                _saveButtons();
+                                                if (context.mounted) {
+                                                  ScaffoldMessenger.of(context).showSnackBar(
+                                                    const SnackBar(
+                                                      content: Text('Layout importado e salvo com sucesso!'),
+                                                      duration: Duration(seconds: 2),
+                                                    ),
+                                                  );
+                                                }
+                                              }
+                                            } catch (_) {
+                                              if (context.mounted) {
+                                                ScaffoldMessenger.of(context).showSnackBar(
+                                                  const SnackBar(
+                                                    content: Text('Formato de layout inválido na área de transferência.'),
+                                                    duration: Duration(seconds: 2),
+                                                  ),
+                                                );
+                                              }
+                                            }
+                                          },
+                                          icon: const Icon(Icons.paste, color: Colors.greenAccent),
+                                          label: const Text('Import Layout', style: TextStyle(color: Colors.greenAccent)),
+                                          style: OutlinedButton.styleFrom(
+                                            side: const BorderSide(color: Colors.greenAccent),
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+
+                                  const SizedBox(height: 16),
 
                                   // Botão para resetar posição dos controles
                                   OutlinedButton.icon(
