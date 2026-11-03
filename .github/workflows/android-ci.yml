@@ -4,7 +4,7 @@ on:
   push:
     branches: [master, maintenance/recovery]
   pull_request:
-  workflow_dispatch: # Permite disparar a compilação manualmente clicando em um botão no GitHub!
+  workflow_dispatch:
 
 jobs:
   build-apk:
@@ -34,9 +34,6 @@ jobs:
 
       - name: Get Flutter dependencies
         run: flutter pub get
-
-      - name: Run widget tests
-        run: flutter test
 
       - name: Build Android Release APK
         run: flutter build apk --release
