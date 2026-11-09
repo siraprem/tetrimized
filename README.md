@@ -11,7 +11,6 @@ Sabe o Tetr.io, aquele jogo de Tetris online que todo mundo joga no navegador? P
 ## Funcionalidades
 
 - Roda o Tetr.io direto no celular
-- Performance absurdamente melhor (até 300% melhor que o normal)
 - Interface adaptada pra touch (melhor que abrir no navegador)
 - Opacidade customizável dos botões (pra não tapar o jogo)
 - Menu rápido para esconder/mostrar UI
@@ -19,21 +18,7 @@ Sabe o Tetr.io, aquele jogo de Tetris online que todo mundo joga no navegador? P
 
 ## Qual versão baixar?
 
-A gente tem duas branches principais agora. O projeto evoluiu e a estrutura mudou bastante, então se liga na diferença:
-
-### Versão Turbo (O Futuro) - **RECOMENDADA**
-Essa é a versão onde a mágica acontece. Ela usa toda a tecnologia nova e de ponta que implementamos (como o sistema de otimizações de performance). 
-
-- **Foco:** Máxima performance, resposta ao toque instantânea e funcionalidades novas.
-- **Atualizações:** Essa é a versão que vai receber tudo de novo primeiro. É o meu foco principal de desenvolvimento.
-
-### Versão Pro (Legacy / Estabilidade)
-Essa versão é o nosso "tanque de guerra" antigo. A estrutura dela é bem diferente e muito mais difícil de mexer/manter na branch de estabilidade.
-
-- **Foco:** Estabilidade bruta para celulares que não aguentam o Turbo.
-- **Atualizações:** Ela entrou em modo **Legacy**. Só vou mexer nela se algo quebrar completamente, se o app parar de abrir ou se tiver alguma vulnerabilidade bizarra. Se você quer as novidades, vá de Turbo.
-
-**Peço desculpas por isso mas tá realmente impossível mexer nessa branch.**
+As branches `master`, `bleeding-edge` e `stability-pro` contêm históricos distintos. Consulte a página de releases para versões distribuídas; não há garantia de desempenho relativo entre branches.
 
 ### Como Baixar
 Para baixar o aplicativo, acesse nossa página de lançamentos:
@@ -45,7 +30,7 @@ Para baixar o aplicativo, acesse nossa página de lançamentos:
 ## Como rodar e buildar
 
 ### Pré-requisitos
-- Flutter SDK instalado (versão 3.0 ou mais nova)
+- Flutter SDK compatível com Dart `^3.11.4`, conforme `pubspec.yaml`
 - Android Studio ou Xcode
 - Git (óbvio)
 
@@ -71,6 +56,8 @@ Para baixar o aplicativo, acesse nossa página de lançamentos:
    ```
 
 ## Estrutura do projeto
+
+Relatórios e instruções históricos foram preservados em [`docs/archive/`](docs/archive/). Eles registram experimentos e avaliações antigas; não comprovam ganhos de desempenho.
 
 ```
 tetrimized/

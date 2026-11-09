@@ -13,7 +13,6 @@ You know Tetr.io, that online Tetris game everyone plays in the browser? Well, t
 ## Features
 
 - Runs Tetr.io directly on your phone
-- Significantly better performance (up to 300% better than normal)
 - Touch-adapted interface (better than opening in a browser)
 - Customizable button opacity (so they don't block the game)
 - Quick menu to hide/show UI
@@ -21,21 +20,7 @@ You know Tetr.io, that online Tetris game everyone plays in the browser? Well, t
 
 ## Which version to download?
 
-We now have two main branches. The project has evolved and the structure has changed a lot, so pay attention to the difference:
-
-### 🚀 Turbo Version (The Future) - **RECOMMENDED**
-This is where the magic happens. It uses all the new cutting-edge technology we've implemented (like the performance optimization system).
-
-- **Focus:** Maximum performance, instant touch response, and new features.
-- **Updates:** This version will receive all new features first. It's my main development focus.
-
-### 🛡️ Pro Version (Legacy / Stability)
-This version is our old "tank". Its structure is very different and much harder to modify/maintain in the stability branch.
-
-- **Focus:** Raw stability for phones that can't handle the Turbo version.
-- **Updates:** It has entered **Legacy** mode. I'll only touch it if something breaks completely, if the app stops opening, or if there's some serious vulnerability. If you want the new stuff, go with Turbo.
-
-**I apologize for this, but it's really impossible to work on this branch.**
+The `master`, `bleeding-edge`, and `stability-pro` branches have different histories. See releases for distributed versions; no relative performance is guaranteed between branches.
 
 ### How to Download
 To download the application, visit our releases page:
@@ -47,7 +32,7 @@ To download the application, visit our releases page:
 ## How to run and build
 
 ### Prerequisites
-- Flutter SDK installed (version 3.0 or newer)
+- Flutter SDK compatible with Dart `^3.11.4`, as declared in `pubspec.yaml`
 - Android Studio or Xcode
 - Git (obviously)
 
@@ -73,6 +58,8 @@ To download the application, visit our releases page:
    ```
 
 ## Project Structure
+
+Historical reports and instructions are preserved in [`docs/archive/`](docs/archive/). They document past experiments and do not prove performance gains.
 
 ```
 tetrimized/
