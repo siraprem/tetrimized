@@ -176,11 +176,11 @@ class _TetrIoPageState extends State<TetrIoPage> {
             event = document.createEvent('KeyboardEvent');
             event.initKeyboardEvent(type, true, true, window, key, 0, '', false, '');
           }
-          
+
           if (['ArrowLeft','ArrowRight','ArrowDown','ArrowUp',' ','z','x','a','c','Escape','r','Enter'].includes(key)) {
             event.preventDefault();
           }
-          
+
           cachedTarget.dispatchEvent(event);
         };
         
