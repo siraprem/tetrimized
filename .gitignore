@@ -85,5 +85,8 @@ Desktop.ini
 *.so
 *.dylib
 
+# Local generated Android test APK
+/tetrimized-adblock.apk
+
 # Goose configuration files
 GOOSE_RULES.md

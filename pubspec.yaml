@@ -50,6 +50,11 @@ dev_dependencies:
   # rules and activating additional ones.
   flutter_lints: ^6.0.0
 
+dependency_overrides:
+  # Local Android fork adds a native pre-network host filter.
+  flutter_inappwebview_android:
+    path: packages/flutter_inappwebview_android
+
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 

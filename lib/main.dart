@@ -8,6 +8,21 @@ import 'package:flutter/services.dart';
 import 'package:flutter_inappwebview/flutter_inappwebview.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+const bool _adBlockEnabled = bool.fromEnvironment(
+  'TETRIMIZED_ADBLOCK',
+  defaultValue: true,
+);
+
+const String _adRequestUrlPattern =
+    r'^https?://([a-z0-9-]+\.)*(pub\.network|doubleclick\.net|googletagservices\.com|amazon-adsystem\.com|intentiq\.com|gum\.criteo\.com|id5-sync\.com|id\.hadron\.ad\.gt|match\.adsrvr\.org|id\.a-mx\.com|live\.primis\.tech|tag\.durationmedia\.net|s0\.2mdn\.net|googlesyndication\.com|cdn\.hadronid\.net)(:[0-9]+)?/.*$';
+
+final List<ContentBlocker> _iosAdBlockRules = [
+  ContentBlocker(
+    trigger: ContentBlockerTrigger(urlFilter: _adRequestUrlPattern),
+    action: ContentBlockerAction(type: ContentBlockerActionType.BLOCK),
+  ),
+];
+
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
   SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersiveSticky);
@@ -144,6 +159,7 @@ class _TetrIoPageState extends State<TetrIoPage> {
     source: """
       (function() {
         'use strict';
+        window.__tetrimizedAdBlockEnabled = $_adBlockEnabled;
         let cachedTarget = null;
         let lastTargetCheck = 0;
         const TARGET_CHECK_INTERVAL = 3000;
@@ -328,6 +344,19 @@ class _TetrIoPageState extends State<TetrIoPage> {
               initialUserScripts: UnmodifiableListView<UserScript>([_userScript]),
               initialSettings: InAppWebViewSettings(
                 javaScriptEnabled: true,
+                // Avoid Android ContentBlocker's per-request HEAD lookup; use the native host filter.
+                contentBlockers:
+                    _adBlockEnabled &&
+                            (defaultTargetPlatform == TargetPlatform.iOS ||
+                                defaultTargetPlatform == TargetPlatform.macOS)
+                        ? _iosAdBlockRules
+                        : const <ContentBlocker>[],
+                // Also enables the local Android shouldInterceptRequest host filter.
+                regexToCancelSubFramesLoading:
+                    _adBlockEnabled &&
+                            defaultTargetPlatform == TargetPlatform.android
+                        ? _adRequestUrlPattern
+                        : null,
                 useHybridComposition: true,
                 cacheEnabled: true,
                 cacheMode: CacheMode.LOAD_DEFAULT,
